@@ -16,4 +16,4 @@ My plan is to start filling this space with my thoughts on the intersection of b
 
 ### Contact me
 
-[ptizei@gmail.com](mailto:ptizei@gmail.com)
+[ptizei(AT)gmail.com](mailto:ptizei(AT)gmail.com)

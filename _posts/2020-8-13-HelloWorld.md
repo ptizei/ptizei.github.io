@@ -3,8 +3,14 @@ layout: post
 title: Hello World!
 ---
 
-Next you can update your site name, avatar and other options using the _config.yml file in the root of your repository (shown below).
+*taps mic* Is this thing on?
 
-![_config.yml]({{ site.baseurl }}/images/config.png)
+Welcome to my (hopefully, long-lived) new blog/personal site!
 
-The easiest way to make your first post is to edit this one. Go into /_posts/ and update the Hello World markdown file. For more instructions head over to the [Jekyll Now repository](https://github.com/barryclark/jekyll-now) on GitHub.
+![_TomHanksWave.gif](https://media.giphy.com/media/QLKSt3wQqlj7a/giphy.gif)
+
+After leaving my most recent position, I've decided to finish taking the plunge and dedicate serious time to upskill in coding/data analysis! This blog will be my way of holding myself accountable, practice a style of writing I've never done in the past and also, hopefully, share some interesting/useful info with anyone that does follow.
+
+In the next few weeks, I plan to start writing regularly on various personal projects that I have going, mostly in some intersection of biology and tech. I will try to keep things informal and approachable, but I'm sure my style will evolve with time.
+
+If you'd like to know more about me, have a look at the about page. And if you'd like to send me any feedback, get in touch by email or Twitter DM!  
