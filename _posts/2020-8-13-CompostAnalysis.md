@@ -55,6 +55,9 @@ What can we conclude from all this? 1) can't just blindly trust any type of auto
 
 
 \* Get ready to deal with my inconsistent use of British and American words/spelling, cos it's all a mess in my head! I do try to stick to the British forms since it's what I used most recently, but I'm sure I'll miss a few here and there\*\*
+
 \*\* Random footnotes are probably going to be frequent too... Side thoughts are a big part of my thought process and I always loved reading the wild footnotes in books like The Mezzanine and the whole Discworld series.
+
 \*\*\* By "collecting data into a '.csv', read that I took photos of the board when it got full and then typed everything up manually. I don't think even the best modern image recognition software could reliably decode my awful handwriting!"
+
 \*\*\*\* Of course, the fallible human forgot to record when that switch happened!
