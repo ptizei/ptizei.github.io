@@ -9,6 +9,8 @@ I had tried growing some courgettes/zucchinis\* in the garden and they kept dryi
 
 Since around April, every food scrap that is not meat or prepared food (fruit/veggie peels, egg shells, stalks, etc) has been going into piles like in the photo below, along with lawn clippings and dry leaves.
 
+![about]({{ site.baseurl }}/images/CompostPile.jpg)
+
 COMPOST PILE PHOTO!!!!
 
 Then, I just make sure to keep the pile moist and turn it 1-2 times a week. Every month or so, I split the pile, move the new half elsewhere, and then just add new scraps into the new pile. After another couple of weeks, the old pile is ready to be used as soil for planting. The new plants are still not perfect, but they certainly look better than they did before I started this whole process!
