@@ -59,7 +59,7 @@ What can we conclude from all this?
 
 1) We can't just blindly trust any type of automated analyses on a dataset without exploring it a bit and understanding how it was generated. If I simply received this dataset with no explanation for the 0 compost input days, I could interpret that as a much bigger variability in the amount of scraps produced every day than is visible in the sliding window plots. Since I was actually producing the scraps and taking them out, I can dig up explanations for what we're seeing on the plots from memory. But relying on memory is definitely not a good way to produce reliable data on anything, which leads to the next point..
 
-2) Humans are fallible/lazy! Of course, I wrote that last statement in the third person to sidestep some of the guilt, but the point remains that an inconvenient/labour intensive data collection process is error-prone and that will have implications on the quality of the dataset. #
+2) Humans are fallible/lazy! Of course, I wrote that last statement in the third person to sidestep some of the guilt, but the point remains that an inconvenient/labour intensive data collection process is error-prone and that will have implications on the quality of the dataset.
 
 Would an automated system with a balance that logs straight to a database and a conveyor belt to carry the scraps to the garden help here? Definitely!
 
@@ -70,7 +70,7 @@ Am I going to spend the money and time to build something that complex for this 
 
 \* Get ready to deal with my inconsistent use of British and American words/spelling, cos it's all a mess in my head! I do try to stick to the British forms since it's what I used most recently, but I'm sure I'll miss a few here and there\*\*
 
-\*\* Random footnotes are probably going to be frequent too... Side thoughts are a big part of my thought process and I always loved reading the wild footnotes in books like The Mezzanine and the whole Discworld series.
+\*\* Random footnotes are probably going to be frequent too... Side thoughts are a big part of my thought process and I always loved reading the wild footnotes in books like [The Mezzanine](https://en.wikipedia.org/wiki/The_Mezzanine) and [the whole Discworld series](https://en.wikipedia.org/wiki/Discworld).
 
 \*\*\* By "collecting data into a '.csv', read that I took photos of the board when it got full and then typed everything up manually. I don't think even the best modern image recognition software could reliably decode my awful handwriting!"
 
