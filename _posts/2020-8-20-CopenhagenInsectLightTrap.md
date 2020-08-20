@@ -31,12 +31,15 @@ All 44088 rows in the table were from only two insect orders: Coleoptera (beetle
 
 Jumping up to families, there's 104 different families and exactly 52 for each order!\*\*\* Adding up all the counts for individual animals collected, they had just over 250k insects, just under 6 counts per row in the table. But are these observations evenly distributed enough for a mean to have any meaning? I took this mean for each individual family and the vast majority had values close to 1, but 4 had values over 10 and the highest was 25 (figure below, left panel). From this, it's already clear that there's a big heterogeneity in the frequency for each family. I made another plot with the sum of all individuals for each family and a similar pattern appeared, but with an even bigger dominance of the most observed families (figure below, right panel)
 
-![Mean and total individuals per order]({{ site.baseurl }}/images/MeanTotalIndsPerOrder.png)
+![Mean and total individuals per family]({{ site.baseurl }}/images/MeanTotalIndsPerOrder.png)
 
 Repeating those plots with a log-scale y axis makes the lower end of the scale a little less bunched up and it's clear that there is a lot of variation at that range, as well (figure below).
 
+![Mean and total individuals per family (log-scale y axis)]({{ site.baseurl }}/images/MeanTotalIndsPerOrderLog.png)
 
-![Mean and total individuals per order (log-scale y axis)]({{ site.baseurl }}/images/MeanTotalIndsPerOrderLog.png)
+Let's try looking at these same numbers in histograms, to get a better idea of how they're distributed than we can get from looking at bunched up points. In the first one on the left, most of the points land on the first bin and then a few stragglers  are scattered all the way to 60k individuals. Cutting off the plot below 10k counts dos spread them a bit, but the first bin still has over 80% of the families. Zooming further in, to the families below 1k counts, it does start filling up the x-axis a bit more and the first bin only has about 60% of the values. This does seem like one of those long-tailed distributions that appear frequently in biology, like a power law, where the the vast majority of observations are clustered at very low values and a tiny number of groups have huge values.
+
+![Histograms of total individuals collected per family (3 different x-scales)]({{ site.baseurl }}/images/FamilyHistograms.png)
 
 
 
