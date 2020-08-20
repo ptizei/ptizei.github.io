@@ -23,7 +23,7 @@ So I set up a very elaborate data recording system: a whiteboard stuck to a door
 
 If you can decipher some of my hieroglyphs, you'll see that some days don't have recorded entries. Was no food scrap produced at all on those days? Maybe that did happen on a few days, but certainly not all of them! What happened on most of the days with no entries is that I was either too busy to bother taking out the scraps that day and just added it to the amount for the next day, or I wasn't at home at all. So that's already one confounding factor to keep in mind when we start looking at the actual data!
 
-Which is exactly what we're going to start doing! I collected about 1.5 months of data into a '.csv'\*\*\* and loaded it into a Jupyter notebook([uploaded here if you'd like to have a look at how the sausage gets made](https://github.com/ptizei/MiscAnalyses/blob/master/CompostAnalysesForBlogpost.ipynb)) to make some plots.
+Which is exactly what we're going to start doing! I collected about 1.5 months of data into a `.csv`\*\*\* and loaded it into a Jupyter notebook([uploaded here if you'd like to have a look at how the sausage gets made](https://github.com/ptizei/MiscAnalyses/blob/master/CompostAnalysesForBlogpost.ipynb)) to make some plots.
 
 ![CompostLinePlot.png]({{ site.baseurl }}/images/CompostLinePlot.png)
 
@@ -73,6 +73,6 @@ Am I going to spend the money and time to build something that complex for this 
 
 \*\* Random footnotes are probably going to be frequent too... Side thoughts are a big part of my thought process and I always loved reading the wild footnotes in books like [The Mezzanine](https://en.wikipedia.org/wiki/The_Mezzanine) and [the whole Discworld series](https://en.wikipedia.org/wiki/Discworld).
 
-\*\*\* By "collecting data into a '.csv', read that I took photos of the board when it got full and then typed everything up manually. I don't think even the best modern image recognition software could reliably decode my awful handwriting!"
+\*\*\* By "collecting data into a `.csv`, read that I took photos of the board when it got full and then typed everything up manually. I don't think even the best modern image recognition software could reliably decode my awful handwriting!"
 
 \*\*\*\* Of course, the fallible human forgot to record when that switch happened!
