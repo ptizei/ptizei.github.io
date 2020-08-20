@@ -3,8 +3,6 @@ layout: post
 title: First look at the data from my garden compost pile (AKA, how simple data can be misleading!)
 ---
 
-## Background
-
 As the first real post in this blog, we're going to look at the longest-running personal project that I have right now: the compost pile that I started in the garden about 4 months ago to try to improve the fertility of the soil.
 
 I had tried growing some courgettes/zucchinis\* in the garden and they kept drying out or dying of apparent fungal infections. Then I started following the tweets from a gardener in the US ([@BuildSoil](https://twitter.com/BuildSoil)) who talks a lot about composting as a way to improve soil quality and prevent a lot of these problems, so figured I could give it a try!
