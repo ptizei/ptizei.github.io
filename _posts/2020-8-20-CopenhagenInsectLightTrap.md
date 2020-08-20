@@ -11,7 +11,7 @@ The first glance at Kaggle was great, it seemed like a nicely-formatted `.csv` w
 
 ![Pandas read_csv FAIL!]({{ site.baseurl }}/images/InsectTrapPdReadError.png)
 
-Or maybe not... that mention of 'utf-8' means there must be some weird character in the file that pandas is not happy with! To confirm that, I made a new '.csv' with just the first 5 lines of the full dataset and that loaded just fine, so the thing that's causing the problem is bound to be somewhere in the remaining 44,083 lines... yay! I'm trying to be smart in how I do these analyses, so that rules out scrolling down til I spot something weird.
+Or maybe not... that mention of `utf-8` means there must be some weird character in the file that pandas is not happy with! To confirm that, I made a new `.csv` with just the first 5 lines of the full dataset and that loaded just fine, so the thing that's causing the problem is bound to be somewhere in the remaining 44,083 lines... yay! I'm trying to be smart in how I do these analyses, so that rules out scrolling down til I spot something weird.
 
 I went back to Kaggle to redownload the file, holding onto the faint hope that something got messed up in the download. But no, redownloaded file produces the same error. I did notice that Kaggle has an option to export a dataset to Google Sheets, so I could use the GSuite option to export to `.csv` and hopefully that should generate a file that pandas is happy to read!
 
