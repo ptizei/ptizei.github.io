@@ -7,19 +7,19 @@ Earlier this week, I was scrolling through Kaggle to see what types of biology d
 
 ## Getting the data
 
-The first glance at Kaggle was great, it seemed like a nicely-formatted '.csv' with columns for various taxonomic levels, counts for each species, and collection start/end dates! Should make for a nice smooth start...
+The first glance at Kaggle was great, it seemed like a nicely-formatted `.csv` with columns for various taxonomic levels, counts for each species, and collection start/end dates! Should make for a nice smooth start...
 
 ![Pandas read_csv FAIL!]({{ site.baseurl }}/images/InsectTrapPdReadError.png)
 
 Or maybe not... that mention of 'utf-8' means there must be some weird character in the file that pandas is not happy with! To confirm that, I made a new '.csv' with just the first 5 lines of the full dataset and that loaded just fine, so the thing that's causing the problem is bound to be somewhere in the remaining 44,083 lines... yay! I'm trying to be smart in how I do these analyses, so that rules out scrolling down til I spot something weird.
 
-I went back to Kaggle to redownload the file, holding onto the faint hope that something got messed up in the download. But no, redownloaded file produces the same error. I did notice that Kaggle has an option to export a dataset to Google Sheets, so I could use the GSuite option to export to '.csv' and hopefully that should generate a file that pandas is happy to read!
+I went back to Kaggle to redownload the file, holding onto the faint hope that something got messed up in the download. But no, redownloaded file produces the same error. I did notice that Kaggle has an option to export a dataset to Google Sheets, so I could use the GSuite option to export to `.csv` and hopefully that should generate a file that pandas is happy to read!
 
 ![Kaggle Gsheet export FAIL!]({{ site.baseurl }}/images/KaggleError.png)
 
 After a good 30 seconds watching a spinny wheel that I hoped meant my data was being moved to the bowels of Google, I got an angry red exclamation mark and a useless error message! No, I'm not going to contact support, I'd rather scroll through the 40k+ lines than wait days and days for an answer.
 
-I was about to start writing up the simple code to loop over the entire file and just build the dataframe myself, but then some lucky googling got me to a StackOverflow post that looked hopeful. Somebody mentioned trouble reading a '.csv' with a similar character encoding error and that adding the flag ' encoding = "latin1"' to their '.read_csv()' call solved their issue! I had no idea whether that was the character set in my file\* but I figured "Why not try?". Magically that worked, everything got loaded into a dataframe with no issues and I still have no clue what oddball character in the file was producing that error... some questions are best left unanswered!
+I was about to start writing up the simple code to loop over the entire file and just build the dataframe myself, but then some lucky googling got me to a StackOverflow post that looked hopeful. Somebody mentioned trouble reading a `.csv` with a similar character encoding error and that adding the flag `encoding = "latin1"` to their `.read_csv()` call solved their issue! I had no idea whether that was the character set in my file\* but I figured "Why not try?". Magically that worked, everything got loaded into a dataframe with no issues and I still have no clue what oddball character in the file was producing that error... some questions are best left unanswered!
 
 ## Exploring the data
 
@@ -39,11 +39,13 @@ Let's try looking at these same numbers in histograms, to get a better idea of h
 
 ![Histogram of individuals captured per day]({{ site.baseurl }}/images/IndPerDay.png)
 
-This was a fun dataset to dig into for a little bit and learn a few more of the quirks of pandas to deal with weird file formats and the kinds of transformations on the data that can lead to fun insights. But it's not quite the type of dataset I was hoping to find and then properly dig my claws into it. For my next post, I'll have something that I can start going into in more depth.
+This was a fun dataset to dig into for a little bit and learn a few more of the quirks of pandas to deal with weird file formats, and also get practice with the kinds of transformations on the data that can lead to non-obvious insights. But it's not quite the type of dataset I was hoping to find and then properly dig my claws into it. For my next post, I'll have something that I can start going into in more depth.
 
-The notebook I used for these analysis is up on [one of my public repos](https://github.com/ptizei/MiscAnalyses/blob/master/InsectTrap.ipynb) and the [original paper](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/1365-2656.12452) has in-depth analyses into the types of species they collected and how they varied over the years and also within each year.
+The notebook I used for these analysis is up on [one of my public repos](https://github.com/ptizei/MiscAnalyses/blob/master/InsectTrap.ipynb) and the [original paper](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/1365-2656.12452) has proper in-depth analyses into the types of species they collected and how they varied over the years and also within each year.
 
 ## Footnotes
 \* Atom just shows me "UTF-8" when I open it and I couldn't think of another way to check the character encoding of a text file.
+
 \*\* Identifying species is hard enough for bright, flashy and relatively big birds, but I can say from personal experience in undergrad that anything smaller than a centimetre or two can be an absolute pain to look at if you need to pick out tiny anatomical differences!
+
 \*\*\* Very likely just a big coincidence, but our brains love to see unlikely patterns like this and immediately start searching for some meaning.
