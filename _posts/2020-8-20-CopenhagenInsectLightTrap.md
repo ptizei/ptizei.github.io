@@ -21,7 +21,7 @@ I went back to Kaggle to redownload the file, holding onto the faint hope that s
 
 After a good 30 seconds watching a spinny wheel that I hoped meant my data was being moved to the bowels of Google, I got an angry red exclamation mark and a useless error message! No, I'm not going to contact support, I'd rather scroll through the 40k+ lines than wait days and days for an answer.
 
-I was about to start writing up the simple code to loop over the entire file and just build the dataframe myself, but then some lucky googling got me to a StackOverflow post where somebody mentioned trouble reading '.csv' with a similar character encoding error and that adding the flag ' encoding = "latin1"' to their '.read_csv()' call solved their issue! I had no idea whether that was the character set in my file (Atom just shows me "UTF-8" when I open it...) but I figured "Why not try?". Magically that worked, everything got loaded into a dataframe with no issues and I still have no clue what oddball character in the file was producing that error... some questions are best left unanswered!
+I was about to start writing up the simple code to loop over the entire file and just build the dataframe myself, but then some lucky googling got me to a StackOverflow post that looked hopeful. Somebody mentioned trouble reading a '.csv' with a similar character encoding error and that adding the flag ' encoding = "latin1"' to their '.read_csv()' call solved their issue! I had no idea whether that was the character set in my file\*  but I figured "Why not try?". Magically that worked, everything got loaded into a dataframe with no issues and I still have no clue what oddball character in the file was producing that error... some questions are best left unanswered!
 
 ## Exploring the data
 
@@ -34,11 +34,4 @@ I was about to start writing up the simple code to loop over the entire file and
 
 
 ## Footnotes
-
-\* Get ready to deal with my inconsistent use of British and American words/spelling, cos it's all a mess in my head! I do try to stick to the British forms since it's what I used most recently, but I'm sure I'll miss a few here and there\*\*
-
-\*\* Random footnotes are probably going to be frequent too... Side thoughts are a big part of my thought process and I always loved reading the wild footnotes in books like [The Mezzanine](https://en.wikipedia.org/wiki/The_Mezzanine) and [the whole Discworld series](https://en.wikipedia.org/wiki/Discworld).
-
-\*\*\* By "collecting data into a '.csv', read that I took photos of the board when it got full and then typed everything up manually. I don't think even the best modern image recognition software could reliably decode my awful handwriting!"
-
-\*\*\*\* Of course, the fallible human forgot to record when that switch happened!
+\*Atom just shows me "UTF-8" when I open it and I have no idea how else to check the character encoding of a text file.
