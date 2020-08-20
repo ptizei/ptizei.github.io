@@ -37,15 +37,13 @@ Repeating those plots with a log-scale y axis makes the lower end of the scale a
 
 Let's try looking at these same numbers in histograms, to get a better idea of how they're distributed than we can get from looking at bunched up points. In the first one on the left, most of the points land on the first bin and then a few stragglers are scattered all the way to 60k individuals. Cutting off the plot below 10k counts dos spread them a bit, but the first bin still has over 80% of the families. Zooming further in, to the families below 1k counts, it does start filling up the x-axis a bit more and the first bin only has about 60% of the values. This does seem like one of those long-tailed distributions that appear frequently in biology, like a power law, where the the vast majority of observations are clustered at very low values and a tiny number of groups have huge values.
 
-Another nice aspect of this dataset is that all the observations have start and end dates attached, so I can use the python 'datetime' library to turn them into 'timedelta' values and then I can use those to get a rate of individuals per day that I can use to compare the datapoints, because the length of time between them does vary. After doing that, I see that the majority of intervals are 5 days or shorter, but the longest is 39 days.\*\*\*\*
-
 ![Histogram of individuals captured per day]({{ site.baseurl }}/images/IndPerDay.png)
 
-After calculating the rate of individuals per day, I got the histogram above which is even more impressively of an uneven distribution than the ones for families before
+This was a fun dataset to dig into for a little bit and learn a few more of the quirks of pandas to deal with weird file formats and the kinds of transformations on the data that can lead to fun insights. But it's not quite the type of dataset I was hoping to find and then properly dig my claws into it. For my next post, I'll have something that I can start going into in more depth.
 
+The notebook I used for these analysis is up on [one of my public repos](https://github.com/ptizei/MiscAnalyses/blob/master/InsectTrap.ipynb) and the [original paper](https://besjournals.onlinelibrary.wiley.com/doi/full/10.1111/1365-2656.12452) has in-depth analyses into the types of species they collected and how they varied over the years and also within each year.
 
 ## Footnotes
 \* Atom just shows me "UTF-8" when I open it and I couldn't think of another way to check the character encoding of a text file.
 \*\* Identifying species is hard enough for bright, flashy and relatively big birds, but I can say from personal experience in undergrad that anything smaller than a centimetre or two can be an absolute pain to look at if you need to pick out tiny anatomical differences!
 \*\*\* Very likely just a big coincidence, but our brains love to see unlikely patterns like this and immediately start searching for some meaning.
-\*\*\*\* In a project that lasts for 18 years and long periods with nothing interesting getting captured, I can totally understand if they just couldn't be bothered going up to the roof every week during winter to check their trap!
