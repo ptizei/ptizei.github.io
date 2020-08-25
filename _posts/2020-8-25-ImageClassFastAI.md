@@ -55,6 +55,8 @@ I decided to just throw the kitchen sink at it, redoing the training with data a
 
 As you can see on the table above, I did get a final error rate below 10% by the end of this round of training. Even more interestingly, the best error rates were actually after epochs 8 and 14, and the final value was a touch worse. Looking over at the training and validation losses, the training loss was steadily decreasing in all epochs, but the validation loss reached a minimum at epoch 9, increased again and stabilised around 0.42. This suggests I'm actually starting to overfit the training set, leading to worse performance against the validation set. So, the best error rate I could get with these settings was around 8.5%.
 
+## Conclusions
+
 I could probably keep tweaking to get better performance, but I didn't split off a test set to compare between runs with different hyperparameters, so they wouldn't be fair comparisons anyway. I think I've also had enough of staring at these photos of the various Chrises for a day...
 
 More importantly, I noted down a few points to further explore fastai library is actually doing at various points and to dig into the documentation to find ways to change more settings or expose more useful data into its internal workings:
