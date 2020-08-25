@@ -31,7 +31,7 @@ I took those images directly as they were into training, to see how the default 
 
 My first step was to plot what is called the confusion matrix (below), which is just a table of all vs all labels, showing predictions on the validation set were wrong. A perfect model would have all values along the diagonal, meaning that every label was correctly predicted. As I imagined, the model performed best for images of Chris Rock, only missing one Actual instance of his photos. Rock was also the label with the lowest number of mispredictions (3).
 
-![Chrises confusion matrix]({{ site.baseurl }}/images/ChrisesConfusion.png)
+![Chrises confusion matrix]({{ site.baseurl }}/images/ChrisesConfusion1.png)
 
 Then I looked at the examples in the dataset that had the highest losses, which means the model was least confident about its predictions for those images. I immediately spotted three possible sources of error:
 
