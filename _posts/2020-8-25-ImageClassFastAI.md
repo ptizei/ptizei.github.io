@@ -27,7 +27,7 @@ So I did a Bing query for each of the Chrises, which gave me about 150 images of
 
 I took those images directly as they were into training, to see how the default fastai transfer learning settings would cope with this more challenging (I hoped!) dataset. To my delight, the model training (below) went quite a lot worse than it did for the bear classifier! An error rate of 14% is probably still better than I could do, but at least now I have room to improve on it...
 
-![Chrises dataset training]({{ site.baseurl }}/images/ChrisesTrain.png)
+![Chrises dataset training]({{ site.baseurl }}/images/ChrisesTrain1.png)
 
 My first step was to plot what is called the confusion matrix (below), which is just a table of all vs all labels, showing predictions on the validation set were wrong. A perfect model would have all values along the diagonal, meaning that every label was correctly predicted. As I imagined, the model performed best for images of Chris Rock, only missing one Actual instance of his photos. Rock was also the label with the lowest number of mispredictions (3).
 
