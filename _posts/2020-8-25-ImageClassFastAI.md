@@ -11,13 +11,15 @@ The example they give in the lecture is to build a dataset of images of differen
 
 ![Bear dataset training]({{ site.baseurl }}/images/BearTrain.png)
 
-The table above tells me that from the first stage of training, the model was already getting 100% accuracy (0.0 error rate) on the 20% of the data set aside for validation. After 4 more epochs (rounds) of fine tuning the model, it actually got a little bit worse, but it was still an error rate of just over 1% which is great. The problem with having a near-perfect model straight from the beginning is that it doesn't leave much room for improvement, which is when you actually get to learn something new! And looking at a random sample of the images in the dataset (below), there's some pretty obvious differences between teddy bears and the others, but even black and grizzly bears differ enough in fur colour that it's super easy for us lowly humans to pick them out immediately.
+The table above tells me that from the first stage of training, the model was already getting 100% accuracy (0.0 error rate) on the 20% of the data set aside for validation. After 4 more epochs (rounds) of fine tuning the model, it actually got a little bit worse, but it was still an error rate of just over 1% which is great. The problem with having a near-perfect model straight from the beginning is that it doesn't leave much room for improvement, which is when you actually get to learn something new!
+
+Looking at a random sample of the images in the dataset (below), there's some pretty obvious differences between teddy bears and the others, but even black and grizzly bears differ enough in fur colour that it's super easy for us lowly humans to pick them out immediately.
 
 ![Bears]({{ site.baseurl }}/images/Bears.png)
 
 ## My own dataset
 
-Jeremy promises right at the beginning that it should be easy to get near state-of-the-art performance pretty easily with transfer learning in fastai and I know that the best models can now achieve superhuman performance, so I decided to make a dataset that **I** couldn't classify reliably as a more fun challenge! While racking my brain for classes of images that would be easy to download by searching and were also hard to tell apart, I remembered some twitter memes about Hollywood actors named Chris that all look alike, but I couldn't remember all their last names... so I turned to google's ML models for help with the query "actors named chris that look similar".
+Jeremy promises right at the beginning that it should be easy to get near state-of-the-art performance pretty easily with transfer learning in fastai and I know that the best models can now achieve superhuman performance, so I decided to make a dataset that ***I*** couldn't classify reliably as a more fun challenge! While racking my brain for classes of images that would be easy to download by searching and were also hard to tell apart, I remembered some twitter memes about Hollywood actors named Chris that all look alike, but I couldn't remember all their last names... so I turned to google's ML models for help with the query "actors named chris that look similar".
 
 That gave me one of those suggested result boxes with the title "Who are the 5 chrises": Evans, Hemsworth, Pratt, Pine, and Rock. I don't quite agree that Chris Rock looks very similar to the other ones there, but I guess that must be a case of text processing models like OpenAI's famous GPT-3 outputting wrong results that look just fine at a first glance! I decided to keep Rock in as a sort of internal control that I would be able to recognise, along with Pratt who I think I can regognise better from seeing him a lot in *Parks and Recreation* and *Guardians of the Galaxy*.
 
@@ -25,11 +27,11 @@ So I did a Bing query for each of the Chrises, which gave me about 150 images of
 
 ![Chrises]({{ site.baseurl }}/images/Chrises.png)
 
-I took those images directly as they were into training, to see how the default fastai transfer learning settings would cope with this more challenging (I hoped!) dataset. To my delight, the model training (below) went quite a lot worse than it did for the bear classifier! An error rate of 14% is probably still better than I could do, but at least now I have room to improve on it...
+I took those images directly as they were into training, to see how the default fastai transfer learning settings would cope with this more challenging (I hoped!) dataset. To my delight, the model training (below) went quite a lot worse than it did for the bear classifier! An error rate of 14% is probably **much** better than I could do, but at least now I have room to improve on it...
 
 ![Chrises dataset training]({{ site.baseurl }}/images/ChrisesTrain1.png)
 
-My first step was to plot what is called the confusion matrix (below), which is just a table of all vs all labels, showing predictions on the validation set were wrong. A perfect model would have all values along the diagonal, meaning that every label was correctly predicted. As I imagined, the model performed best for images of Chris Rock, only missing one Actual instance of his photos. Rock was also the label with the lowest number of mispredictions (3).
+My first step was to plot what is called the confusion matrix (below), which is just a table of all vs all labels, showing where predictions on the validation set were wrong. A perfect model would have all values along the diagonal, meaning that every label was correctly predicted. As I imagined, the model performed best for images of Chris Rock, only missing one Actual instance of his photos. Rock was also the label with the lowest number of mispredictions (3).
 
 ![Chrises confusion matrix]({{ site.baseurl }}/images/ChrisesConfusion1.png)
 
@@ -37,17 +39,25 @@ Then I looked at the examples in the dataset that had the highest losses, which 
 
 ![Chrises Losses]({{ site.baseurl }}/images/ChrisesLosses1.png)
 
-1 - My eyes can be bad at telling Chrises apart, but the second image is definitely not a Chris. I make a note to drop that image from the set.
+1 - My eyes can be bad at telling Chrises apart, but the second image in the first row definitely not a Chris. I make a note to drop that image from the set.\*\*
+
 2 - As I expected, there are 3 BW photos that got wrong predictions.
+
 3 - The one mislabeled Chris Rock image only had half of his head in it, because the default setting I used to prepare the data set randomly crops the images to fit the 224x224 input format required by this model.
 
 The latter two points may be fixed by data augmentation techniques, that increase the amount of data available for training image recognition without requiring more images to be downloaded. This is done by changing contrast/colour, randomly cropping in different ways, flipping, and rotating images so they're still easily recognisable by human eyes but "look" very different to the neural network. In this case, I could simply download more images, but this is not always simple for a real dataset so I wanted to see how much improvement these techniques could produce.
 
+## Improving the model
 
+I decided to just throw the kitchen sink at it, redoing the training with data augmentations and for 20 epochs (vs just 4 before), to see whether I could get the error rate below 10%.
 
-## Improving the dataset
+![Chrises dataset training]({{ site.baseurl }}/images/ChrisesTrain2.png)
+
+As you can see on the table above, I did get a final error rate below 10% by the end of this round of training. Even more interestingly, the best error rates were actually after epochs 8 and 14, and the final value was a touch worse. Looking over at the training and validation losses, the training loss was steadily decreasing in all epochs, but the validation loss reached a minimum at epoch 9, increased again and stabilised around 0.42. This suggests I'm actually starting to overfit the training set, leading to worse performance against the validation set. So, the best error rate I could get with these settings was around 8.5%.
 
 
 
 ## Footnotes
 \* This is certainly the first time I've ever actually used Bing for anything and apparently Bing Image search is the best way to get decent number of images by a search through an API!
+
+\*\* While scanning through the images to find that one that isn't a photo at all, I also spotted two others that were just a bit of text and also a few that had more than one person on the image. I dropped all of those potential confounders from the dataset for the rounds of training with data augmentation.
