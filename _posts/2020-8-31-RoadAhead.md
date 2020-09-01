@@ -17,7 +17,7 @@ The next course, which I already mentioned in the [previous post]({{ site.baseur
 
 For the other course I will soon tackle, by total chance I recently happened upon a Twitter post mentioning an online reading group for a book on Bayesian statistics, so I searched around a bit and decided to join the group! The book is [Statistical Rethinking](https://github.com/rmcelreath/statrethinking_winter2019) by Richard McElreath and there are accompanying videos of the course taught at the Max Planck Institute in Leipzig. I've been keen to learn a bit about Bayesian stats for some time, especially with all the recent opinion papers claiming that the traditional frequentist stats are not ideal for research. The package used by this book is R-based, which is not ideal given my plan to focus on Python, but R is also very widely used (probably even more than Python for some visualisation and stats applications), so it is useful to know!
 
-The very fortuitous way that I found the reading group for McElreath's book and how that changed my plans reminded me of this song from *The Lord of the Rings* that I think about sometimes \* \*
+The very fortuitous way that I found the reading group for McElreath's book and how that changed my plans reminded me of this song from *The Lord of the Rings* that I think about sometimes: \* \*
 
 *The Road goes ever on and on*<br/>
 *Down from the door where it began.*<br/>
