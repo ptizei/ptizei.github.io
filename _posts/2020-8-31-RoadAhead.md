@@ -11,7 +11,7 @@ As I mentioned in the [about]({{ site.baseurl }}/about) page here, I decided som
 
 At my most recent research position, I also developed a strong interest in machine learning, more specifically on how it's increasingly being used in academic and industrial biological research. So I joined this interest with the desire to spend more time programming and decided to take courses that would help fill some of the gaps in my training and also give me additional tools to pursue fun personal projects. I decided to focus on making python my programming language of choice, since it is increasingly becoming the *de facto* standard for machine learning applications.
 
-The first course that I picked was the very well-recommended []"Machine Learning"](https://www.coursera.org/learn/machine-learning) by Andrew Ng on Coursera, which I actually started a few months ago and already completed. While I was not a big fan of the programming exercises in Octave/MATLAB, his teaching style based on digging deep into the maths behind the various techniques shown in the course was a great way to get a good understanding of how lots of fairly simple calculations can lead to the awesome results being produced with machine learning techniques nowadays!
+The first course that I picked was the very well-recommended ["Machine Learning"](https://www.coursera.org/learn/machine-learning) by Andrew Ng on Coursera, which I actually started a few months ago and already completed. While I was not a big fan of the programming exercises in Octave/MATLAB, his teaching style based on digging deep into the maths behind the various techniques shown in the course was a great way to get a good understanding of how lots of fairly simple calculations can lead to the awesome results being produced with machine learning techniques nowadays!
 
 The next course, which I already mentioned in the [previous post](ImageClassFastAI), is Jeremy Howard's [Practical Deep Learning for Coders](https://course.fast.ai/), using the fastai library that sits on top of PyTorch, making it very quick to produce working deep learning models while also providing access to lower-level controls for fine-tuning and improvements. I'm still in the first half of this course, but I've very much enjoyed the lectures and exercises that I've completed so far, so I think this couse and the accompanying book will end up as very useful exercises in this journey.
 
@@ -30,13 +30,7 @@ The very fortuitous way that I found the reading group for McElreath's book and 
 
 **-- J.R.R. Tolkien (in the voice of Bilbo Baggins)**
 
-
-
-Hope to go back into R&D work, using the skills I will pick up taking these courses.
-
-
-
-
+While I have had this plan to reskill into computation for quite a few years, I've been letting "The Road" sort of dictate how I get to that end goal. That road has been a very winding path until now and I have certainly enjoyed the majority of that time, but this most recent fork that I've encountered seemed to present a much more direct route, which is the option that I chose this time.
 
 ## Footnotes
 \* I've just realised that with this post, I'm now on the fifth instance in a streak of roughly one post every 5 days. In the interest of keeping this nicely arbitrary trend going, I'm going to make this the update frequency for this blog. It will give me a quick metric to track and also act as a good way to hold myself accountable!
