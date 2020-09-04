@@ -16,15 +16,15 @@ After some quick googling, I found instructions on how to make a spectrogram fro
 
 ![Raven spectrogram]({{ site.baseurl }}/images/raven-spectrogram.png)
 
-That was easy enough, but then I started looking at the code I had used to make it, to try to understand what it had done to the input `.wav` to generate the image.
+That was easy enough, but then I started looking at the code I had used to make it, to try to understand what it had done to the input `.wav` to generate the image:
 
-`
+```
 samplingFrequency, signalData = wavfile.read("Raven.wav")
-`
+```
 
-First, it extracted data from the `.wav` into two variables: `samplingFrequency` just held a single integer value (44100, which is probably the 44kHz I've seen mentioned about sound files) and `signalData` was a numpy array with lots of integer values inside. And these two variables were the only inputs into the matplotlib `specgram` function that generated the plot. It still wasn't clear to me how it was going from a single frequency value and an array of values to the 3d spectrogram plot (time in x, frequency in y and intensity as colour)!
+First, it extracted data from the `.wav` into two variables: `samplingFrequency` just held a single integer value (44100, which is probably the 44kHz I've seen mentioned about sound files) and `signalData` was a numpy array with lots of integer values inside. And these two variables were the only inputs into the matplotlib `specgram` function that generated the plot. It still wasn't clear to me how it was going from a single frequency value and an array of values to the 3d spectrogram plot (time in x, frequency in y and intensity as colour)! That's when I realised I had to do a bit more background reading to understand exactly what is in a `.wav` file and what kind of transformations are done on the data to generate a spectrogram.
 
-That's when I realised I had to do a bit more background reading to understand exactly what is a `.wav` file and what kind of transformations are done on the data to generate a spectrogram.
+
 
 
 ## Footnotes
