@@ -32,6 +32,14 @@ But that's still just an intensity and a time value for each point in the plot, 
 
 The answer to that question requires a bit more maths than I want to go into here, but the plotting function from matplotlib is taking a [Fourier transform](https://en.wikipedia.org/wiki/Fourier_transform)\*\*\* of the sound signal. And as the text in wiki puts it so nicely, it "decomposes a function [the sound wave] into its constituent frequencies", giving an intensity value to colour in each y-axis frequency point of the spectrogram!
 
+I could have just blindly accepted the output of the matplotlib function and moved on, but not knowing even vaguely what was being done to the data was bothering me and this quick dive into sound files made me more comfortable with the whole thing.
+
+Moving back to the dataset construction, I had a way to turn `.wav` files into spectrograms \*\*\*\* and now I **just** had to set up a pipeline to query the iNaturalist database, download the files, split them into equal chunks of time and pump out the spectrograms.
+
+*Cue corny time-lapse montage from 80s films*
+
+I downloaded all the sounds with the most reliable level of annotation for 4 different bird species: american robin (*Turdus migratorius*), common raven (*Corvus corax*), great kiskadee (*Pitangus sulfuratus*, labeled BemTeVi in the dataset \*\*\*\*\*), and house sparrow (*Passer domesticus*, labeled Pardal in the dataset \*\*\*\*\*). To my fun surprise, only about half of them were actually `.wav` and the rest were a mix of other file types, but I figured just the `.wav`s would be plenty of datapoints and chose to ignore the other types for now.
+
 
 ## Footnotes
 \* At least more interesting to me than looking at pictures of actors, but whatever floats your boat!
@@ -39,3 +47,7 @@ The answer to that question requires a bit more maths than I want to go into her
 \*\* Technically, I should probably say "vocalisation", but I'll just stick with sound here because I'm not going to talk about other sounds made by birds that are not vocalisations, like wings flapping.
 
 \*\*\* **Not** the [Fouriest transform](https://www.smbc-comics.com/comic/2013-02-01), though, sadly!
+
+\*\*\*\* For the actual dataset, I chopped out the axes and text and made just a 224x224 pixel plot to be used as model input.
+
+\*\*\*\*\* Because I randomly wrote those names in portuguese when I started writing the code and now I can't be bothered going back and standardising on one language!
