@@ -24,10 +24,18 @@ samplingFrequency, signalData = wavfile.read("Raven.wav")
 
 First, it extracted data from the `.wav` into two variables: `samplingFrequency` just held a single integer value (44100, which is probably the 44kHz I've seen mentioned about sound files) and `signalData` was a numpy array with lots of integer values inside. And these two variables were the only inputs into the matplotlib `specgram` function that generated the plot. It still wasn't clear to me how it was going from a single frequency value and an array of values to the 3d spectrogram plot (time in x, frequency in y and intensity as colour)! That's when I realised I had to do a bit more background reading to understand exactly what is in a `.wav` file and what kind of transformations are done on the data to generate a spectrogram.
 
-Sounds are stored in `.wav` files by
+Sounds are stored in `.wav` files by dividing each second into fragments of `1/samplingFrequency` seconds, with each one of those fragments getting a single integer value corresponding to the intensity of sound coming out of the speaker at that tiny point in time, and those all together make up the array that got saved into `signalData` in my example above. A plot of just those intensity values over time produces the sound wave shape that we've all seen in school:
+
+![Raven sound wave]({{ site.baseurl }}/images/raven-soundwave.png)
+
+But that's still just an intensity and a time value for each point in the plot, where did the frequency values in the spectrogram plot come from??
+
+The answer to that question requires a bit more maths than I want to go into here, but the plotting function from matplotlib is taking a [Fourier transform](https://en.wikipedia.org/wiki/Fourier_transform)\*\*\* of the sound signal. And as the text in wiki puts it so nicely, it "decomposes a function [the sound wave] into its constituent frequencies", giving an intensity value to colour in each y-axis frequency point of the spectrogram!
 
 
 ## Footnotes
 \* At least more interesting to me than looking at pictures of actors, but whatever floats your boat!
 
 \*\* Technically, I should probably say "vocalisation", but I'll just stick with sound here because I'm not going to talk about other sounds made by birds that are not vocalisations, like wings flapping.
+
+\*\*\* **Not** the [Fouriest transform](https://www.smbc-comics.com/comic/2013-02-01), though, sadly!
