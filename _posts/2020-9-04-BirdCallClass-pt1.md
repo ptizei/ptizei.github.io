@@ -18,9 +18,9 @@ After some quick googling, I found instructions on how to make a spectrogram fro
 
 That was easy enough, but then I started looking at the code I had used to make it, to try to understand what it had done to the input '.wav' to generate the image.
 
-'''
+```
 samplingFrequency, signalData = wavfile.read("Raven.wav")
-'''
+```
 
 
 
