@@ -12,16 +12,17 @@ I vaguely remembered, from undergrad classes and talking to friends that researc
 ![Great Tit spectrogram]({{ site.baseurl }}/images/Parus_major_sonagram.jpg)
 *Spectrogram representing the song of a Great Tit (Parus major), from Wikipedia (Maxime Metzmacher, CC BY-SA 3.0)*
 
-After some quick googling, I found instructions on how to make a spectrogram from a '.wav' file in python, using scipy, numpy and matplotlib. I copied and pasted a few lines of code into a notebook, with the changes needed to load my own file and got a pretty spectrogram... Yay!
+After some quick googling, I found instructions on how to make a spectrogram from a `.wav` file in python, using scipy, numpy and matplotlib. I copied and pasted a few lines of code into a notebook, with the changes needed to load my own file and got a pretty spectrogram... Yay!
 
 ![Raven spectrogram]({{ site.baseurl }}/images/raven-spectrogram.png)
 
-That was easy enough, but then I started looking at the code I had used to make it, to try to understand what it had done to the input '.wav' to generate the image.
+That was easy enough, but then I started looking at the code I had used to make it, to try to understand what it had done to the input `.wav` to generate the image.
 
 ```
 samplingFrequency, signalData = wavfile.read("Raven.wav")
 ```
 
+First, it extracted data from the `.wav`
 
 
 ## Footnotes
