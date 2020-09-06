@@ -40,9 +40,11 @@ Moving back to the dataset construction, I had a way to turn `.wav` files into s
 
 I downloaded all the sounds with the most reliable level of annotation for 4 different bird species: american robin (*Turdus migratorius*), common raven (*Corvus corax*), great kiskadee (*Pitangus sulfuratus*, labeled BemTeVi in the dataset \*\*\*\*\*), and house sparrow (*Passer domesticus*, labeled Pardal in the dataset \*\*\*\*\*). To my fun surprise, only about half of them were actually `.wav` and the rest were a mix of other file types, but I figured just the `.wav`s would be plenty of datapoints and chose to ignore the other types for now.
 
-The length of the files ranged from just a few seconds to over 2 minutes, so I also had to cut them down into equal-sized chunks so the final spectrograms would all be in the same shape and scale. I arbitrarily decided to make them all into 10-second chunks and then did a bit of data augmentation by using a sliding window approach, where I moved along the sounds in 3-second increments. So the first image from a recording would cover the first 10 seconds, the second image would cover 10 seconds starting at second 3, and so on.
+The length of the files ranged from just a few seconds to over 2 minutes, so I also had to cut them down into equal-sized chunks so the final spectrograms would all be in the same shape and scale. I arbitrarily decided to make them all into 10-second chunks and then did a bit of data augmentation by using a sliding window approach, where I moved along the sounds in 3-second increments. So the first image from a recording would cover the first 10 seconds, the second image would cover 10 seconds starting at second 3, and so on. It sounds a bit confusing, but hopefully the scheme below makes it a bit clearer:
 
-**INSERT IMAGE HERE TO ILLUSTRATE THE SLIDING WINDOW**
+![Sliding window spectrogram scheme]({{ site.baseurl }}/images/SpecSlidingWindow.png)
+*This sample sound got divided into three separate spectrograms, with the window of time corresponding to each highlighted in the original plot with a different colour. The overlap between adjacent spectrograms is clear when you compare repeating patterns that slide across each spectrogram in the series.
+
 
 As I produced the images, I placed them into separate folders for each species, so that would act as my label when training models. I also randomly split 20% of the images off into a test set stored on a separate folder, so I could do hyperparameter optimisation later and compare models based on performance on that held-out test set.
 
