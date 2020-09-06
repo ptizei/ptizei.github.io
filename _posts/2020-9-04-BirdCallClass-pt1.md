@@ -45,7 +45,6 @@ The length of the files ranged from just a few seconds to over 2 minutes, so I a
 ![Sliding window spectrogram scheme]({{ site.baseurl }}/images/SpecSlidingWindow.png)
 *This sample sound got divided into three separate spectrograms, with the window of time corresponding to each highlighted in the original plot with a different colour. The overlap between adjacent spectrograms is clear when you compare repeating patterns that slide across each spectrogram in the series.
 
-
 As I produced the images, I placed them into separate folders for each species, so that would act as my label when training models. I also randomly split 20% of the images off into a test set stored on a separate folder, so I could do hyperparameter optimisation later and compare models based on performance on that held-out test set.
 
 I blitzed through this last part and probably made it look easy, but each of those steps took a decent amount of time to figure out the best way to do! All the code for this is in my [iNaturalistDatasetGenerator repo](https://github.com/ptizei/iNaturalistDatasetGenerator), split a bit haphazardly into actual scripts and jupyter notebooks. As I said at the top, the actual model training will come in the next post, but I learned so much while just preparing the data that I thought it would be interesting to share here! And, as I've heard from pretty much every data scientist I've ever met, dataset construction and cleanup is one of the biggest parts of the job, so why hide it?
