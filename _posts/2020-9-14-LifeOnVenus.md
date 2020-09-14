@@ -38,5 +38,5 @@ I also just found that there is a [python API](https://pypi.org/project/pytrends
 
 \*\*\* These plots will auto-update constantly and interest will probably wane soon, so I'll put screenshots of their current versions as of the time of this post below, so that my text still makes some sense after today.
 
-![Trends 7days](({{ site.baseurl }}/images/venus-phosphine-7days.png))
-![Trends 30days](({{ site.baseurl }}/images/venus-phosphine-30days.png))
+![Trends 7days]({{ site.baseurl }}/images/venus-phosphine-7days.png)
+![Trends 30days]({{ site.baseurl }}/images/venus-phosphine-30days.png)
