@@ -22,7 +22,7 @@ I thought that was pretty interesting and wondered how many other people like me
 
 I also tried expanding the date range to see if maybe the baseline at 7 days was already elevated from a leak within smaller groups:
 
-<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2213_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES1", {"comparisonItem":[{"keyword":"/m/01n6rt","geo":"","time":"today 1-m"},{"keyword":"/m/01_1nb","geo":"","time":"today 1-m"},{"keyword":"/m/09bcm","geo":"","time":"today 1-m"}],"category":0,"property":""}, {"exploreQuery":"date=today%201-m&q=%2Fm%2F01n6rt,%2Fm%2F01_1nb,%2Fm%2F09bcm","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2213_RC01/embed_loader.js"></script> <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/01n6rt","geo":"","time":"today 1-m"},{"keyword":"/m/01_1nb","geo":"","time":"today 1-m"},{"keyword":"/m/09bcm","geo":"","time":"today 1-m"}],"category":0,"property":""}, {"exploreQuery":"date=today%201-m&q=%2Fm%2F01n6rt,%2Fm%2F01_1nb,%2Fm%2F09bcm","guestPath":"https://trends.google.com:443/trends/embed/"}); </script>
 *Plot of interest over time in the search terms "Venus", "phosphine", and "Royal Astronomical Society"\*\*, for the last 30 days.* \*\*\*
 
 This one is fairly flat for all terms and even the uptick that happened today is not visible. This is probably because the data for the monthly plot is not updated as often as the weekly one, so this might show a spike by tomorrow.
