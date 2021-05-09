@@ -1,6 +1,6 @@
 ---
 layout: post
-title: InDel paper is finally published!
+title: InDel paper and musings on alignments
 ---
 
 ## Foreword
@@ -12,7 +12,7 @@ Since the preprint was posted:
 * I've moved between countries 2 times.
 * The paper went to 3 different journals, with multiple rounds of reviews.
 
-Vitor Pinheiro, my PhD supervisor and corresponding author on the paper, had his own personal/career transitions in this period that were lower in count, but just as impactful. Refer to his own [blog post](https://pinheirolab.com/2020/04/10/new-lab/) from last year explaining some of the challenges he faced moving the lab to Belgium.
+Dr. Vitor Pinheiro, my PhD supervisor and corresponding author on the paper, had his own personal/career transitions in this period that were lower in count, but just as impactful. Refer to his own [blog post](https://pinheirolab.com/2020/04/10/new-lab/) from last year explaining some of the challenges he faced moving the lab to Belgium.
 
 This post is actually meant to discuss some aspects of the paper, but I felt it was worth adding this comment at the beginning to give more people a view into the black box of the world of papers and journals. I was fortunate to have continued progressing in my career despite not having a first-author publication from the PhD until now, but I am very aware that not all [roads](https://ptizei.github.io/RoadAhead/) I could have taken would have been so forgiving of this gap.
 
@@ -52,5 +52,7 @@ My question at the top of the section is a bit facetious, but I am genuinely exc
 ## Footnotes
 
 \* We started developing the method in late 2015, first presented it publicly at the SynBio UK conference late 2016 in Edinburgh, and the first version of the [bioRxiv preprint](https://www.biorxiv.org/content/10.1101/127829v2) was posted in April 2017.
+
 \*\* I won't go into details on the actual models, because there are **many** diferent architectures used for similar tasks and I haven't had the chance to test any of them yet, so I don't really have an opinion on how they actually differ in practice.
+
 \*\*\* For instance, UniRep's final model took >1 week to train on multiple very pricey GPUs. And I'm sure they used those GPUs for several months before landing on the published iteration of the model.
