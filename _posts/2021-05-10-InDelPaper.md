@@ -3,7 +3,7 @@ layout: post
 title: InDel paper and musings on alignments
 ---
 
-After a very windy >5-year ordeal\*, I'm happy to say that we have finally published [the paper](https://www.nature.com/articles/s41598-021-88708-4) covering the most successful part of my PhD work! Four years since the original preprint is a very long time and it seems hard to understand how it could have taken this long, so I'll rattle off a few numbers to provide some context into the personal sides of academic publishing that rarely get mentioned.
+After a very windy 5-year+ ordeal\*, I'm happy to say that we have finally published [the paper](https://www.nature.com/articles/s41598-021-88708-4) covering the most successful part of my PhD work! Four years since the original preprint is a very long time and it seems hard to understand how it could have taken this long, so I'll rattle off a few numbers to provide some context into the personal sides of academic publishing that rarely get mentioned.
 
 Since the preprint was posted:
 * I've finished my PhD and worked in 3 different companies.
